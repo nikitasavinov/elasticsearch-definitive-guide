@@ -25,16 +25,13 @@ following command from the Elasticsearch home directory:
 
 [source,sh]
 --------------------------------------------------
-./bin/plugin -install elasticsearch/elasticsearch-analysis-icu/$VERSION <1>
+sudo bin/plugin install analysis-icu
 --------------------------------------------------
-
-<1> The current `$VERSION` can be found at
-    _https://github.com/elasticsearch/elasticsearch-analysis-icu_.
 
 Once installed, restart Elasticsearch, and you should see a line similar to the
 following in the startup logs:
 
-    [INFO][plugins] [Mysterio] loaded [marvel, analysis-icu], sites [marvel]
+    [INFO][plugins] [Mysterio] modules[reindex], plugins [marvel, analysis-icu], sites [marvel]
 
 If you are running a cluster with multiple nodes, you will need to install the
 plug-in on every node in the cluster.
